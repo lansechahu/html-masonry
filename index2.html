@@ -240,6 +240,12 @@
                     //到底加载更多
                     createList();
                 }
+
+            });
+
+            $('.listContent').on('touchend', function () {
+                var list = document.getElementById('listBox');
+                var scrollTop = list.scrollTop;
                 if (scrollTop <= -50) {
                     refresh(); //刷新
                 }
