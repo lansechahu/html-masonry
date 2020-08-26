@@ -201,6 +201,11 @@
                 var _item = $(getItem(tempObj));
                 $('#masonry').append(_item).masonry('appended', _item);
             }
+
+            var masonryImg = new imagesLoaded(document.getElementById('masonry'));
+            masonryImg.on('always', function () {
+                console.log('图片已全部加载，或被确认加载失败');
+            });
         }
 
         //单个项目模板，返回组合好的节点内容
